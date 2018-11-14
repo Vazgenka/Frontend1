@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Quattrocento|Roboto+Condensed|Scada');
+
+body {
+  padding-top: 10px;
+  background-color: #800080;
+  font-family: 'Quattrocento';
+  font-weight: 600;
+  font-size: 19px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+h1 {
+  padding-top:130px;
+  font-family: 'Scada';
+  color: #000;
+  font-weight: 600;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Scada';
+  color: #000;
+  color: #000;
+}
+
+p {
+  font-family: 'Scada';
+  color: #000;
+}
+
+.navbar-brand {
+  font-family: 'Permanent Marker';
+  padding-right: 50px;
+  color: #000;
+}
+
+a {
+    color: #000;
+    font-family: 'Roboto Condensed';
+
+}
+
+ul.nav a:hover, ul.nav a:focus {
+    color: #ffffff;
+    outline: 0;
+    background-color: #800080;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none;
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
