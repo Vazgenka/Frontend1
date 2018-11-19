@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style media="screen">
+      .forCat {
+         position: absolute;
+         background-color: #ffffff;
+         width: 150px;
+         height: 150px;
+         border: 1px solid black;
+      }
+    </style>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
-      for (i=0;i<10;i++) {
-        $.get("http://aws.random.cat/meow").done(
-          function(data) {
-            $("#random").append(" <img height=365 width=300 src='"+ data.file +"'> ")
-          }
-        )
-      }
+      $(document).ready(function(){
+        var i = 0;
+        function getCat() {
+          i++;
+          var simpleDiv = $("<div>", {
+            "class": "forCat",
+            "id": "div_" + i,
+            "style":"margin-top: "+ randomInt(0,600) +"px; margin-left: "+ randomInt(0,1400) +"px;"
+          }).html(i).click(function() {
+            $(this).fadeOut(500)
+          })
 
+          $("body").append(simpleDiv)
+
+          setTimeout(getCat,800)
+        }
+
+        getCat()
+
+          function randomInt(min, max) {
+            min = Math.ceil(min)
+            max = Math.floor(max)
+            return Math.floor(Math.random() * (max-min)) + min;
+          }
+      })
     </script>
   </head>
   <body>
-    <div id="random"></div>
   </body>
 <html>
