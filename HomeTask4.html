@@ -21,7 +21,7 @@
           var simpleDiv = $("<div>", {
             "class": "forCat",
             "id": "div_" + i,
-            "style":"margin-top: "+ randomInt(0,600) +"px; margin-left: "+ randomInt(0,1400) +"px; box-shadow: "+ shadowChange()+"px "+ rgba(0,0,0,0.5) + ";"
+            "style":"margin-top: "+ randomInt(0,600) +"px; margin-left: "+ randomInt(0,1400) +"px; box-shadow: "+ shadowChange()+"px "+ "rgba(0,0,0,0.5)" + ";"
           }).html(i).click(function() {
             $(this).remove()
           })
@@ -40,7 +40,7 @@
           }
 
           function shadowChange(min, max) {
-            for(j=0;j<10,j++) {
+            for(j=0;j<10;j++) {
               j++;
             }
           }
