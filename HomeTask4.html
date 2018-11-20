@@ -3,6 +3,7 @@
   <head>
     <style media="screen">
       .forCat {
+         box-shadow: 0 0 10px rgba(0,0,0,0.5);
          position: absolute;
          background-color: #ffffff;
          width: 150px;
@@ -15,27 +16,33 @@
     <script>
       $(document).ready(function(){
         var i = 0;
-        function getCat() {
+        function getDiv() {
           i++;
           var simpleDiv = $("<div>", {
             "class": "forCat",
             "id": "div_" + i,
-            "style":"margin-top: "+ randomInt(0,600) +"px; margin-left: "+ randomInt(0,1400) +"px;"
+            "style":"margin-top: "+ randomInt(0,600) +"px; margin-left: "+ randomInt(0,1400) +"px; box-shadow: "+ shadowChange()+"px "+ rgba(0,0,0,0.5) + ";"
           }).html(i).click(function() {
-            $(this).fadeOut(500)
+            $(this).remove()
           })
 
           $("body").append(simpleDiv)
 
-          setTimeout(getCat,800)
+          setTimeout(getDiv,800)
         }
 
-        getCat()
+        getDiv()
 
           function randomInt(min, max) {
             min = Math.ceil(min)
             max = Math.floor(max)
             return Math.floor(Math.random() * (max-min)) + min;
+          }
+
+          function shadowChange(min, max) {
+            for(j=0;j<10,j++) {
+              j++;
+            }
           }
       })
     </script>
