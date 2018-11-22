@@ -32,18 +32,17 @@
         }
         getDiv()
 
+        $("forCat").animate({
+          width:"+=100"+"px",
+          height:"+=100"+"px",
+          border: "+=30"+"px",
+        });
+
         function randomInt(min, max) {
           min = Math.ceil(min)
           max = Math.floor(max)
           return Math.floor(Math.random() * (max-min)) + min;
         }
-
-        $("forCat").animate({
-          width:"+=100"+"px",
-          height:"+=100"+"px",
-          border: "+=30"+"px",
-
-        });
       })
     </script>
   </head>
