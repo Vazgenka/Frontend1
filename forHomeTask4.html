@@ -27,17 +27,15 @@
           })
 
           $("body").append(simpleDiv)
-
+          $("#div_"+ i).animate({
+            width:"+=100"+"px",
+            height:"+=100"+"px",
+            border: "+=30"+"px"
+          },500,function() {
+          });
           setTimeout(getDiv,800)
         }
         getDiv()
-
-        $("forCat").animate({
-          width:"+=100"+"px",
-          height:"+=100"+"px",
-          border: "+=30"+"px",
-        },500,function() {
-        });
 
         function randomInt(min, max) {
           min = Math.ceil(min)
