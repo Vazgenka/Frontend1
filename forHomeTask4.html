@@ -6,8 +6,8 @@
          box-shadow: 0 0 10px rgba(0,0,0,0.5);
          position: absolute;
          background-color: #ffffff;
-         width: 150px;
-         height: 150px;
+         width: 10px;
+         height: 10px;
          border: 1px solid black;
       }
     </style>
@@ -22,11 +22,11 @@
             "class": "forCat",
             "id": "div_" + i,
             "style":"margin-top: "+ randomInt(0,600) +"px; margin-left: "+ randomInt(0,1400) +"px;"
-          }).html(i).click(function() {
+          }).click(function() {
             $(this).remove()
           })
 
-          $("body").animate(simpleDiv)
+          $("body").append(simpleDiv)
 
           setTimeout(getDiv,800)
         }
@@ -37,6 +37,13 @@
           max = Math.floor(max)
           return Math.floor(Math.random() * (max-min)) + min;
         }
+
+        $("forCat").animate({
+          width:"+=100"+"px",
+          height:"+=100"+"px",
+          border: "+=30"+"px",
+
+        });
       })
     </script>
   </head>
