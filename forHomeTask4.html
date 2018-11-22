@@ -26,19 +26,17 @@
             $(this).remove()
           })
 
-          $("body").append(simpleDiv)
+          $("body").animate(simpleDiv)
 
           setTimeout(getDiv,800)
         }
-
         getDiv()
 
-          function randomInt(min, max) {
-            min = Math.ceil(min)
-            max = Math.floor(max)
-            return Math.floor(Math.random() * (max-min)) + min;
-          }
-
+        function randomInt(min, max) {
+          min = Math.ceil(min)
+          max = Math.floor(max)
+          return Math.floor(Math.random() * (max-min)) + min;
+        }
       })
     </script>
   </head>
