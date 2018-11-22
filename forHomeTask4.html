@@ -23,7 +23,11 @@
             "id": "div_" + i,
             "style":"margin-top: "+ randomInt(0,600) +"px; margin-left: "+ randomInt(0,1400) +"px;"
           }).click(function() {
-            $(this).remove()
+            $(this).animate({
+              width:"-=150"+"px",
+              height:"-=150"+"px",
+            },200,function() {
+            }).remove()
           })
 
           $("body").append(simpleDiv)
